@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
                     int pos = Integer.parseInt(etToDo.getText().toString());
-                    if (pos >= toDoList.size()) {
+                    if (pos >= toDoList.size() && pos < 0) {
                         Toast.makeText(MainActivity.this, getString(R.string.errorIndex), Toast.LENGTH_SHORT).show();
                     } else {
                         toDoList.remove(pos);
